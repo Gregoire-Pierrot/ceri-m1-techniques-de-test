@@ -3,15 +3,15 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: circleci/openjdk:8-jdk  # Utilisation de l'image Docker avec Java 8
+      - image: circleci/openjdk:17.0.2-jdk  # Utilisation de l'image Docker avec Java 8
     steps:
       - checkout  # Vérifier le code source
-      - run:
-          name: Install Maven
-          command: |
-            curl -s https://apache.osuosl.org/maven/binaries/apache-maven-3.8.4-bin.tar.gz | tar xz
-            echo 'export PATH=$PATH:$(pwd)/apache-maven-3.8.4/bin' >> $BASH_ENV
-            source $BASH_ENV
+      #- run:
+      #    name: Install Maven
+      #    command: |
+      #      curl -s https://apache.osuosl.org/maven/binaries/apache-maven-3.8.4-bin.tar.gz | tar xz
+      #      echo 'export PATH=$PATH:$(pwd)/apache-maven-3.8.4/bin' >> $BASH_ENV
+      #      source $BASH_ENV
       - run:
           name: Run Maven tests
           command: mvn test  # Exécuter les tests unitaires avec Maven (Junit et Mockito gérés par le pom.xml)
