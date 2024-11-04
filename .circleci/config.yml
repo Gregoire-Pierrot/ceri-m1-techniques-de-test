@@ -23,8 +23,6 @@ jobs:
       - run:
           name: Upload to codecov
           command: mvn clean test jacoco:report
-          
-
 
 workflows:
   version: 2
@@ -35,5 +33,4 @@ workflows:
             branches:
               only:
                 - master
-      - upload_to_codecov:
-          needs: build
+      - upload_to_codecov
