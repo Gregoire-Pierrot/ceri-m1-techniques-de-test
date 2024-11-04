@@ -18,15 +18,14 @@ jobs:
           command: mvn test  # Exécuter les tests unitaires avec Maven
       - run:
           name: Run Maven coverage
-          command: mvn test jacoco:report
-      - run:
-          name: List files
-          command: ls -l target/site/jacoco
+          command: mvn jacoco:report
+
   upload_to_codecov:
     executor: maven-executor
     steps:
-      - codecov/upload:  # Envoyer les résultats de tests
-          file: target/site/jacoco
+      - run:
+          name: Upload to codecov
+          command: bash <(curl -s https://codecov.io/bash) -t ${CODECOV_TOKEN}
 
 workflows:
   version: 2
