@@ -50,7 +50,7 @@
                             <outputDirectory>${project.build.directory}/jacoco</outputDirectory>
                         </configuration>
                     </execution>
-                
+
                     <!-- Générer le rapport JaCoCo après les tests -->
                     <execution>
                         <id>report</id>
@@ -65,5 +65,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
