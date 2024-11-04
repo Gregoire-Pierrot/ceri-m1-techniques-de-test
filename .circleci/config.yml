@@ -19,6 +19,9 @@ jobs:
       - run:
           name: Run Maven coverage
           command: mvn test jacoco:report
+      -run:
+          name: List files
+          command: ls -l target/site/jacoco
   upload_to_codecov:
     executor: maven-executor
     steps:
