@@ -37,5 +37,4 @@ workflows:
             branches:
               only:
                 - master
-      - upload_to_codecov:
-          needs: build
+      - upload_to_codecov
