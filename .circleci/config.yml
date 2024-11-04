@@ -16,6 +16,7 @@ jobs:
       - run:
           name: Run Maven tests
           command: mvn test  # Exécuter les tests unitaires avec Maven
+          command: mvn test jacoco:report
   upload_to_codecov:
     executor: maven-executor
     steps:
