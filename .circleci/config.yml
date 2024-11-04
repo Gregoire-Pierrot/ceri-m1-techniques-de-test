@@ -16,8 +16,14 @@ jobs:
       - run:
           name: Run Maven tests
           command: mvn test  # Exécuter les tests unitaires avec Maven
-      - codecov/upload:
-          file: {{ coverage_report_filepath }}
+  upload_to_codecov:
+    executor: maven-executor
+    steps:
+      - checkout
+      - run:
+          name: Upload to codecov
+          command: mvn clean test jacoco:report
+          
 
 
 workflows:
@@ -29,3 +35,5 @@ workflows:
             branches:
               only:
                 - master
+      - upload_to_codecov:
+          needs: build
