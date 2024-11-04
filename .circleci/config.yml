@@ -19,13 +19,15 @@ orbs:
 
 workflows:
   version: 2
-  build:
+  build-and-upload:
     jobs:
       - build:
           filters:
             branches:
               only:
                 - master
-  upload-to-codecov:
-    jobs:
-      - codecov/upload
+      - codecov/upload:
+          requires:
+            - build
+          with:
+            codecov_token: ${{ secrets.CODECOV_TOKEN }}
