@@ -23,7 +23,7 @@ jobs:
     executor: maven-executor
     steps:
       - codecov/upload:  # Envoyer les résultats de tests
-          file: ${project.build.directory}/jacoco
+          file: target/site/jacoco/jacoco.xml
 
 workflows:
   version: 2
