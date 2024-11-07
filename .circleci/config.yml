@@ -22,13 +22,10 @@ jobs:
       - run:
           name: Run Maven coverage
           command: mvn jacoco:report
-
-  upload_to_codecov:
-    executor: maven-executor
-    steps:
       - run:
           name: Upload to codecov
           command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco -r "YgueOne/ceri-m1-techniques-de-test"
+      
 workflows:
   version: 2
   build:
@@ -38,4 +35,3 @@ workflows:
             branches:
               only:
                 - master
-      - upload_to_codecov
