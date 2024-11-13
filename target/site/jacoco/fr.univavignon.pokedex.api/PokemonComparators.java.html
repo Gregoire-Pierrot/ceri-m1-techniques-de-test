@@ -9,13 +9,13 @@ import java.util.Comparator;
  */
 <span class="fc" id="L10">public enum PokemonComparators implements Comparator&lt;Pokemon&gt; {</span>
 
-<span class="fc" id="L12">	/** Comparator using Pokemon name. **/</span>
+	/** Comparator using Pokemon name. **/
 <span class="fc" id="L13">	NAME(Comparator.comparing(Pokemon::getName)),</span>
 
-<span class="fc" id="L15">	/** Comparator using Pokemon index. **/</span>
+	/** Comparator using Pokemon index. **/
 <span class="fc" id="L16">	INDEX(Comparator.comparing(Pokemon::getIndex)),</span>
 	
-<span class="fc" id="L18">	/** Comparator using Pokemon combat point. **/</span>
+	/** Comparator using Pokemon combat point. **/
 <span class="fc" id="L19">	CP(Comparator.comparing(Pokemon::getCp))</span>
 	
 	;
@@ -36,7 +36,7 @@ import java.util.Comparator;
 	@Override
 	public int compare(final Pokemon first, final Pokemon second) {
 		
-<span class="nc" id="L39">		return delegate.compare(first, second);</span>
+<span class="fc" id="L39">		return delegate.compare(first, second);</span>
 	}
 
 }

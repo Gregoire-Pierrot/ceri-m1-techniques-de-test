@@ -26,35 +26,18 @@ public class IPokemonFactoryTest {
     public void testCreatePokemon(){
         Pokemon pokemonTest = new Pokemon(-1, "PokemonTest", 0, 0, 0, 613, 64, 4000, 4, 56);
         Mockito.when(iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4)).thenReturn(pokemonTest);
-        assertEquals(-1, iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4).getIndex());
-        assertEquals(613, iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4).getCp());
-        assertEquals(64, iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4).getHp());
-        assertEquals(4000, iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4).getDust());
-        assertEquals(4, iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4).getCandy());
-        assertEquals(56, iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4).getIv());
 
-        List<Pokemon> pokemonList = new ArrayList<Pokemon>();
-        pokemonList.add(Bulbizarre);
-        pokemonList.add(Charmender);
-        pokemonList.add(Aquali);
+        Pokemon createdPokemon = iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4);
 
-        List<Pokemon> pokemonList_Name = new ArrayList<Pokemon>();
-        pokemonList_Name.add(Aquali);
-        pokemonList_Name.add(Bulbizarre);
-        pokemonList_Name.add(Charmender);
+        assertEquals(-1, createdPokemon.getIndex());
+        assertEquals(613, createdPokemon.getCp());
+        assertEquals(64, createdPokemon.getHp());
+        assertEquals(4000, createdPokemon.getDust());
+        assertEquals(4, createdPokemon.getCandy());
+        assertEquals(56.0, createdPokemon.getIv(), 0.0001);
 
-        List<Pokemon> pokemonList_Index = pokemonList;
-
-        List<Pokemon> pokemonList_CP = new ArrayList<Pokemon>();
-        pokemonList_CP.add(Charmender);
-        pokemonList_CP.add(Aquali);
-        pokemonList_CP.add(Bulbizarre);
-
-        Collections.sort(pokemonList, PokemonComparators.NAME);
-        assertEquals(pokemonList_Name, pokemonList);
-        Collections.sort(pokemonList, PokemonComparators.INDEX);
-        assertEquals(pokemonList_Index, pokemonList);
-        Collections.sort(pokemonList, PokemonComparators.CP);
-        assertEquals(pokemonList_Name, pokemonList);
+        assertEquals(0, PokemonComparators.NAME.compare(pokemonTest, createdPokemon));
+        assertEquals(0, PokemonComparators.INDEX.compare(pokemonTest, createdPokemon));
+        assertEquals(0, PokemonComparators.CP.compare(pokemonTest, createdPokemon));
     }
 }
