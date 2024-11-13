@@ -40,7 +40,7 @@ Grégoire Pierrot, M1 ILSEN, groupe 1
 
 ## État du projet
 
-CircleCi : [![CircleCI](https://undefined/status-badge/img/circleci/STVR3NFqmXMnaGC6xojpXQ/RTY2qkwWWeFhdfx5EZfupV/tree/main.svg?style=svg)](https://undefined/status-badge/redirect/circleci/STVR3NFqmXMnaGC6xojpXQ/RTY2qkwWWeFhdfx5EZfupV/tree/main)
+CircleCi : [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/STVR3NFqmXMnaGC6xojpXQ/RTY2qkwWWeFhdfx5EZfupV/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/circleci/STVR3NFqmXMnaGC6xojpXQ/RTY2qkwWWeFhdfx5EZfupV/tree/main)
 
 CodeCov : [![codecov](https://codecov.io/gh/Gregoire-Pierrot/ceri-m1-techniques-de-test/graph/badge.svg?token=KBY7SUO60T)](https://codecov.io/gh/Gregoire-Pierrot/ceri-m1-techniques-de-test)
 
