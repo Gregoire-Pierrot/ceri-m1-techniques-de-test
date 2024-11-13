@@ -24,7 +24,7 @@ jobs:
           command: mvn jacoco:report
       - run:
           name: Upload to codecov
-          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco -r "YgueOne/ceri-m1-techniques-de-test"
+          command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco -r "Gregoire-Pierrot/ceri-m1-techniques-de-test"
       
 workflows:
   version: 2
