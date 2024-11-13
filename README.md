@@ -34,4 +34,20 @@ Le rendu des TPs se fait au rythme suivant :
 Pour chaque rendu vous devez créer un tag à partir du commit qui correspond à la complétion du TP.  
 Si vous ne spécifiez pas de tag, le dernier commit à la date-heure de la fin de séance sera celui considéré.
 
+##
+
+## Fait par qui ?
+
+Grégoire Pierrot, M1 ILSEN
+
+## État du projet
+
+CircleCi : [![CircleCI](https://undefined/status-badge/img/circleci/STVR3NFqmXMnaGC6xojpXQ/RTY2qkwWWeFhdfx5EZfupV/tree/main.svg?style=svg)](https://undefined/status-badge/redirect/circleci/STVR3NFqmXMnaGC6xojpXQ/RTY2qkwWWeFhdfx5EZfupV/tree/main)
+
+CodeCov : [![codecov](https://codecov.io/gh/Gregoire-Pierrot/ceri-m1-techniques-de-test/graph/badge.svg?token=KBY7SUO60T)](https://codecov.io/gh/Gregoire-Pierrot/ceri-m1-techniques-de-test)
+
+## Documentations sur l'implémentation
+
+(Aucune implémentation pour l'instant)
+
 [^1]: Si vous n’êtes vraiment pas à l’aise avec cet outil nous vous conseillons quand même vivement de vous y mettre.
