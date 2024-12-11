@@ -1,30 +1,29 @@
 package fr.univavignon.pokedex.api;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Collections;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.Before;
 import org.junit.Test;
 
-//TODO:
 public class PokemonTrainerTest {
 
-    private PokemonTrainer pokemonTrainer;
+    private PokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();
+    private PokemonFactory pokemonFactory = PokemonFactory.getInstance();
+    private Pokedex pokedex = new Pokedex(pokemonMetadataProvider, pokemonFactory);
+    private PokemonTrainer pokemonTrainer = new PokemonTrainer("TrainerTest", Team.INSTINCT, pokedex);
 
     @Test
     public void getNameTest(){
-        
+        assertEquals("TrainerTest", pokemonTrainer.getName());
     }
 
     @Test
     public void getTeamTest(){
-        
+        assertEquals(Team.INSTINCT, pokemonTrainer.getTeam());
     }
 
     @Test
     public void getPokedexTest(){
-        
+        assertEquals(pokedex, pokemonTrainer.getPokedex());
     }
     
 }

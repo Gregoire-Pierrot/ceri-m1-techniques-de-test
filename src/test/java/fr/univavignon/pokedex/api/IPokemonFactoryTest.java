@@ -17,10 +17,11 @@ public class IPokemonFactoryTest {
 
     @Test
     public void testCreatePokemon(){
-        Pokemon pokemonTest = new Pokemon(-1, "PokemonTest", 0, 0, 0, 613, 64, 4000, 4, 56);
-        Mockito.when(iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4)).thenReturn(pokemonTest);
+        Pokemon pokemonTest = new Pokemon(-1, "PokemonTest", 500, 30, 1, 613, 64, 4000, 4, 56);
+        PokemonMetadata pokemonTestMetadata = new PokemonMetadata(-1, "PokemonTest", 500, 30, 1);
+        Mockito.when(iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4, pokemonTestMetadata)).thenReturn(pokemonTest);
 
-        Pokemon createdPokemon = iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4);
+        Pokemon createdPokemon = iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4, pokemonTestMetadata);
 
         assertEquals(-1, createdPokemon.getIndex());
         assertEquals(613, createdPokemon.getCp());
