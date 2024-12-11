@@ -2,10 +2,6 @@ package fr.univavignon.pokedex.api;
 
 import static org.junit.Assert.assertEquals;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Collections;
-
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -13,9 +9,6 @@ import org.mockito.Mockito;
 public class IPokemonFactoryTest {
 
     private IPokemonFactory iPokemonFactory_mocked;
-    private Pokemon Bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
-    private Pokemon Charmender = new Pokemon(3, "Charmender", 126, 126, 90, 7813, 64, 4000, 4, 56);
-    private Pokemon Aquali = new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
     
     @Before
     public void setUp(){
