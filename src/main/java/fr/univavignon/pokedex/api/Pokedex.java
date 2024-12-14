@@ -41,11 +41,6 @@ public class Pokedex implements IPokedex {
         if (id < 0 || id >= size()){
             throw new PokedexException("No Pokemon in this pokedex for this id:" + id);
         }
-        try {
-            pokemons.get(id);
-        } catch (IndexOutOfBoundsException e) {
-            throw new PokedexException("No Pokemon in this pokedex for this id:" + id);
-        }
         return pokemons.get(id);
     }
 
