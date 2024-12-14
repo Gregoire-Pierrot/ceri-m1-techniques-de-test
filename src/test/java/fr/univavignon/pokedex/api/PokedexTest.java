@@ -73,7 +73,7 @@ public class PokedexTest {
             assertThrows(IllegalArgumentException.class, () -> {});
         }
 
-        assertThrows(PokedexException.class, () -> { pokedex.getPokemon(3); });
+        assertThrows(PokedexException.class, () -> { pokedex.getPokemon(pokedex.size()); });
         assertThrows(PokedexException.class, () -> { pokedex.getPokemon(-1); });
     }
 

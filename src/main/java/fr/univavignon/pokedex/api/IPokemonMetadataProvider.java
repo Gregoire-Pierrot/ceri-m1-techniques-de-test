@@ -1,8 +1,5 @@
 package fr.univavignon.pokedex.api;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * An IPokemonMetadataProvider aims to provide PokemonMetadata
  * for a given pokemon index.
@@ -10,7 +7,6 @@ import java.util.List;
  * @author fv
  */
 public interface IPokemonMetadataProvider {
-	List<PokemonMetadata> pokemonMetadatas = new ArrayList<PokemonMetadata>();
 
 	/**
 	 * Retrieves and returns the metadata for the pokemon

@@ -5,10 +5,9 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class PokemonMetadataTest {
-
-    PokemonMetadata pokemonMetadata1 = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
-    PokemonMetadata pokemonMetadata2 = new PokemonMetadata(3, "Charmender", 126, 126, 90);
-    PokemonMetadata pokemonMetadata3 = new PokemonMetadata(133, "Aquali", 186, 168, 260);
+    private PokemonMetadata pokemonMetadata1 = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
+    private PokemonMetadata pokemonMetadata2 = new PokemonMetadata(3, "Charmender", 126, 126, 90);
+    private PokemonMetadata pokemonMetadata3 = new PokemonMetadata(133, "Aquali", 186, 168, 260);
 
     
     @Test

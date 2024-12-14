@@ -7,7 +7,6 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 public class IPokemonFactoryTest {
-
     private IPokemonFactory iPokemonFactory_mocked;
     
     @Before

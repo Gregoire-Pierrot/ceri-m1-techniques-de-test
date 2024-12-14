@@ -10,7 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IPokedexTest {
-
     private IPokedex iPokedex_mocked;
     private Pokemon Bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
     private Pokemon Charmender = new Pokemon(3, "Charmender", 126, 126, 90, 7813, 64, 4000, 4, 56);

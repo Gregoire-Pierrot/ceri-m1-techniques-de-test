@@ -5,7 +5,6 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 public class PokemonTrainerTest {
-
     private PokemonMetadataProvider pokemonMetadataProvider = PokemonMetadataProvider.getInstance();
     private PokemonFactory pokemonFactory = PokemonFactory.getInstance();
     private Pokedex pokedex = new Pokedex(pokemonMetadataProvider, pokemonFactory);

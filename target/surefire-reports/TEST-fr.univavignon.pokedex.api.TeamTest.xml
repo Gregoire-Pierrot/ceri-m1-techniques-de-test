@@ -58,8 +58,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="fr.univavignon.pokedex.api.TeamTest" name="testTeamValues" time="0.001"/>
-  <testcase classname="fr.univavignon.pokedex.api.TeamTest" name="testTeamValueOf" time="0.001"/>
+  <testcase classname="fr.univavignon.pokedex.api.TeamTest" name="testTeamValues" time="0.002"/>
+  <testcase classname="fr.univavignon.pokedex.api.TeamTest" name="testTeamValueOf" time="0"/>
   <testcase classname="fr.univavignon.pokedex.api.TeamTest" name="testTeamToString" time="0"/>
   <testcase classname="fr.univavignon.pokedex.api.TeamTest" name="testInvalidTeamValueOf" time="0.001"/>
 </testsuite>

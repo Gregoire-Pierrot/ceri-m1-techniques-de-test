@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 public class IPokemonMetadataProviderTest {
-    
     private IPokemonMetadataProvider iPokemonMetadataProvider_mocked;
 
     private Pokemon Bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);

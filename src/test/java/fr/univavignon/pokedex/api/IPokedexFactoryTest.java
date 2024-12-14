@@ -8,10 +8,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class IPokedexFactoryTest {
-
-    private static IPokedex iPokedex;
-    private static IPokemonMetadataProvider iPokemonMetadataProvider;
-    private static IPokemonFactory iPokedexFactory;
+    private IPokedex iPokedex;
+    private IPokemonMetadataProvider iPokemonMetadataProvider;
+    private IPokemonFactory iPokedexFactory;
 
     private IPokedexFactory iPokedexFactory_mocked;
 

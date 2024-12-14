@@ -7,12 +7,11 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 public class IPokemonTrainerFactoryTest {
+    private IPokemonTrainerFactory iPokemonTrainerFactory_mocked;
 
-    IPokemonTrainerFactory iPokemonTrainerFactory_mocked;
-
-    IPokedex iPokedex;
-    IPokedexFactory iPokedexFactory;
-    PokemonTrainer pokemonTrainer = new PokemonTrainer("TrainerTest", Team.MYSTIC, iPokedex);
+    private IPokedex iPokedex;
+    private IPokedexFactory iPokedexFactory;
+    private PokemonTrainer pokemonTrainer = new PokemonTrainer("TrainerTest", Team.MYSTIC, iPokedex);
 
     @Before
     public void setUp(){

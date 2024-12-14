@@ -5,11 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class PokemonMetadataProviderTest {
-    private PokemonMetadataProvider pokemonMetadataProvider = PokemonMetadataProvider.getInstance();
-    PokemonMetadata Bulbizarre_metadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
-    PokemonMetadata Charmender_metadata = new PokemonMetadata(3, "Charmender", 126, 126, 90);
-    PokemonMetadata Aquali_metadata = new PokemonMetadata(133, "Aquali", 186, 168, 260);
-
+    private final PokemonMetadataProvider pokemonMetadataProvider = PokemonMetadataProvider.getInstance();
 
     @Test
     public void getPokemonMetadataTest(){
