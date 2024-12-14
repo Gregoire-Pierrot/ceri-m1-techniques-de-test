@@ -2,15 +2,12 @@ package fr.univavignon.pokedex.api;
 
 import static org.junit.Assert.*;
 
-import org.mockito.Mockito;
-import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class PokedexTest {
-    private final PokemonMetadataProvider metadataProvider = new PokemonMetadataProvider(); //TODO: en faire un sigleton
+    private final PokemonMetadataProvider metadataProvider = PokemonMetadataProvider.getInstance();
     private final Pokedex pokedex = new Pokedex(metadataProvider, PokemonFactory.getInstance());
     private final Pokemon Bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
     private final Pokemon Charmender = new Pokemon(3, "Charmender", 126, 126, 90, 7813, 64, 4000, 4, 56);
@@ -31,10 +28,9 @@ public class PokedexTest {
     @Test
     public void createPokemonTest(){
         PokemonMetadata Bulbizarre_metadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
-        Pokemon pokemon = pokedex.createPokemon(0, 613, 64, 4000, 4, Bulbizarre_metadata);
-        Pokemon pokemon2 = new Pokemon(0, null, 0, 0, 0, 0, 0, 0, 0, 0);
+        Pokemon pokemon = pokedex.createPokemon(613, 64, 4000, 4, Bulbizarre_metadata);
 
-        assertEquals(0, pokemon.getIndex());
+        assertEquals(Bulbizarre_metadata.getIndex(), pokemon.getIndex());
         assertEquals(Bulbizarre_metadata.getName(), pokemon.getName());
         assertTrue(Bulbizarre_metadata.getAttack() <= pokemon.getAttack() && pokemon.getAttack() <= Bulbizarre_metadata.getAttack() + 15);
         assertTrue(Bulbizarre_metadata.getDefense() <= pokemon.getDefense() && pokemon.getDefense() <= Bulbizarre_metadata.getDefense() + 15);
@@ -57,21 +53,28 @@ public class PokedexTest {
         assertEquals(0, pokedex.size());
         assertEquals(0, pokedex.addPokemon(Bulbizarre));
         assertEquals(1, pokedex.size());
-        assertEquals(-1, pokedex.addPokemon(Bulbizarre));
-        assertEquals(1, pokedex.size());
-        assertEquals(133, pokedex.addPokemon(Aquali));
+        assertEquals(1, pokedex.addPokemon(Bulbizarre));
         assertEquals(2, pokedex.size());
+        assertEquals(2, pokedex.addPokemon(Aquali));
+        assertEquals(3, pokedex.size());
     }
 
     @Test
     public void getPokemonTest(){
         assertThrows(PokedexException.class, () -> { pokedex.getPokemon(0); });
-        pokedex.addPokemon(Bulbizarre);
+        int add_bulbizarre1 = pokedex.addPokemon(Bulbizarre);
+        int add_bulbizarre2 = pokedex.addPokemon(Bulbizarre);
+        int add_aquali = pokedex.addPokemon(Aquali);
         try {
-            assertEquals(Bulbizarre, pokedex.getPokemon(0));
+            assertEquals(Bulbizarre, pokedex.getPokemon(add_bulbizarre1));
+            assertEquals(Bulbizarre, pokedex.getPokemon(add_bulbizarre2));
+            assertEquals(Aquali, pokedex.getPokemon(add_aquali));
         } catch (PokedexException e) {
             assertThrows(IllegalArgumentException.class, () -> {});
-        }        
+        }
+
+        assertThrows(PokedexException.class, () -> { pokedex.getPokemon(3); });
+        assertThrows(PokedexException.class, () -> { pokedex.getPokemon(-1); });
     }
 
     @Test

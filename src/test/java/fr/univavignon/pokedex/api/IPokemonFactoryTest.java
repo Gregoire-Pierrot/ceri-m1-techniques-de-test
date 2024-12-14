@@ -19,9 +19,9 @@ public class IPokemonFactoryTest {
     public void testCreatePokemon(){
         Pokemon pokemonTest = new Pokemon(-1, "PokemonTest", 500, 30, 1, 613, 64, 4000, 4, 56);
         PokemonMetadata pokemonTestMetadata = new PokemonMetadata(-1, "PokemonTest", 500, 30, 1);
-        Mockito.when(iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4, pokemonTestMetadata)).thenReturn(pokemonTest);
+        Mockito.when(iPokemonFactory_mocked.createPokemon(613, 64, 4000, 4, pokemonTestMetadata)).thenReturn(pokemonTest);
 
-        Pokemon createdPokemon = iPokemonFactory_mocked.createPokemon(-1, 613, 64, 4000, 4, pokemonTestMetadata);
+        Pokemon createdPokemon = iPokemonFactory_mocked.createPokemon(613, 64, 4000, 4, pokemonTestMetadata);
 
         assertEquals(-1, createdPokemon.getIndex());
         assertEquals(613, createdPokemon.getCp());

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class PokemonTrainerTest {
 
-    private PokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();
+    private PokemonMetadataProvider pokemonMetadataProvider = PokemonMetadataProvider.getInstance();
     private PokemonFactory pokemonFactory = PokemonFactory.getInstance();
     private Pokedex pokedex = new Pokedex(pokemonMetadataProvider, pokemonFactory);
     private PokemonTrainer pokemonTrainer = new PokemonTrainer("TrainerTest", Team.INSTINCT, pokedex);

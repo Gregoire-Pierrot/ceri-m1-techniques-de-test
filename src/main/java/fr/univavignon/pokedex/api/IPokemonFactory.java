@@ -10,13 +10,13 @@ public interface IPokemonFactory {
 	/**
 	 * Creates a pokemon instance computing it IVs.
 	 * 
-	 * @param index Pokemon index.
 	 * @param cp Pokemon CP.
 	 * @param hp Pokemon HP.
 	 * @param dust Required dust for upgrading pokemon.
 	 * @param candy Required candy for upgrading pokemon.
+	 * @param metadata Requierd metadata for creating a new pokemon.
 	 * @return Created pokemon instance.
 	 */
-	Pokemon createPokemon(int index, int cp, int hp, int dust, int candy, PokemonMetadata metadata);
+	Pokemon createPokemon(int cp, int hp, int dust, int candy, PokemonMetadata metadata);
 	
 }

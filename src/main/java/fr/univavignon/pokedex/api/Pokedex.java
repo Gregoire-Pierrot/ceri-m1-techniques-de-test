@@ -21,11 +21,8 @@ public class Pokedex implements IPokedex {
     }
 
     @Override
-    public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy, PokemonMetadata metadata) {
-        Pokemon pokemon = pokemonFactory.createPokemon(index, cp, hp, dust, candy, metadata);
-        addPokemon(pokemon);
-
-        return pokemon;
+    public Pokemon createPokemon(int cp, int hp, int dust, int candy, PokemonMetadata metadata) {
+        return pokemonFactory.createPokemon(cp, hp, dust, candy, metadata);
     }
 
     @Override
@@ -35,21 +32,21 @@ public class Pokedex implements IPokedex {
 
     @Override
     public int addPokemon(Pokemon pokemon) {
-        if (pokemons.contains(pokemon)) {
-            return -1;
-        }
         pokemons.add(pokemon);
-        return pokemon.getIndex();
+        return pokemons.size() - 1;
     }
 
     @Override
     public Pokemon getPokemon(int id) throws PokedexException {
-        for (Pokemon pokemon : pokemons){
-            if (pokemon.getIndex() == id){
-                return pokemon;
-            }
+        if (id < 0 || id > size()){
+            throw new PokedexException("No Pokemon in this pokedex for this id:" + id);
         }
-        throw new PokedexException("No Pokemon in this pokedex for this id:" + id);
+        try {
+            pokemons.get(id);
+        } catch (IndexOutOfBoundsException e) {
+            throw new PokedexException("No Pokemon in this pokedex for this id:" + id);
+        }
+        return pokemons.get(id);
     }
 
     @Override

@@ -9,11 +9,11 @@ public class PokedexFactoryTest {
     
     @Test
     public void createPokedexTest(){
-        PokemonMetadataProvider pokemonMetadataProvider = new PokemonMetadataProvider();
+        PokemonMetadataProvider metadataProvider = PokemonMetadataProvider.getInstance();
         PokemonFactory pokemonFactory = PokemonFactory.getInstance();
-        IPokedex pokedex = pokedexFactory.createPokedex(pokemonMetadataProvider, pokemonFactory);
+        IPokedex pokedex = pokedexFactory.createPokedex(metadataProvider, pokemonFactory);
 
-        assertEquals(pokemonMetadataProvider, pokedex.getMetadataProvider());
+        assertEquals(metadataProvider, pokedex.getMetadataProvider());
         assertEquals(pokemonFactory, pokedex.getPokemonFactory());
     }
 

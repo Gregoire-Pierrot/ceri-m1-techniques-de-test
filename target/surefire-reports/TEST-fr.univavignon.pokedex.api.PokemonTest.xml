@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="fr.univavignon.pokedex.api.PokemonTest" time="0.001" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="fr.univavignon.pokedex.api.PokemonTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="jansi.mode" value="force"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -58,9 +58,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="sun.cpu.endian" value="little"/>
   </properties>
-  <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getDustTest" time="0"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getDustTest" time="0.003"/>
   <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getCpTest" time="0"/>
   <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getHpTest" time="0"/>
   <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getCandyTest" time="0"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getIvTest" time="0.001"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getIvTest" time="0"/>
 </testsuite>

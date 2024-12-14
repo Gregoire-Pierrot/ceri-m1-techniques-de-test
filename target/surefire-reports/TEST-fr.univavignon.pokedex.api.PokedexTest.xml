@@ -59,12 +59,12 @@
     <property name="sun.cpu.endian" value="little"/>
   </properties>
   <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getPokemonsTest" time="0.001"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getMetadataProviderTest" time="0"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getPokemonFactoryTest" time="0.001"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getMetadataProviderTest" time="0.001"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getPokemonFactoryTest" time="0"/>
   <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getPokemonTest" time="0.002"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="sizeTest" time="0"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="sizeTest" time="0.001"/>
   <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getPokemonMetadataTest" time="0.001"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="addPokemonTest" time="0.001"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getPokemonsWithComparator" time="0.006"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="createPokemonTest" time="0"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="addPokemonTest" time="0"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="getPokemonsWithComparator" time="0.005"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokedexTest" name="createPokemonTest" time="0.001"/>
 </testsuite>

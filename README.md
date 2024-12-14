@@ -46,6 +46,10 @@ CodeCov : [![codecov](https://codecov.io/gh/Gregoire-Pierrot/ceri-m1-techniques-
 
 ## Documentations sur l'implémentation
 
-(Aucune implémentation pour l'instant)
+Changement sur les fichiers déjà présents :
+- [IPokemonFactory.java](src/main/java/fr/univavignon/pokedex/api/IPokemonFactory.java) : modification sur la méthode `createPokemon` -> rajout des metadatas de l'espèce du pokemon à créer et suppression de l'index déjà présent dans les metadatas.
+
+Précision sur l'implémentation :
+- Les classes [PokedexFactory](src/main/java/fr/univavignon/pokedex/api/PokedexFactory.java), [PokemonFactory](src/main/java/fr/univavignon/pokedex/api/PokemonFactory.java), [PokemonMetadataProvider](src/main/java/fr/univavignon/pokedex/api/PokemonMetadataProvider.java), [PokemonTrainerFactory](src/main/java/fr/univavignon/pokedex/api/PokemonTrainerFactory.java) sont définies en singleton puisqu'elles représentent une manière prédéfini de création d'objet ou une liste prédéfinie de metadata. Leurs interfaces quand à elles ne contiennent pas la méthode `getInstance` puisqu'il est possible de créer une classe inmplémentant l'une d'elle qui définis une liste ou une méthode de création à l'instanciation d'un de ses objets.
 
 [^1]: Si vous n’êtes vraiment pas à l’aise avec cet outil nous vous conseillons quand même vivement de vous y mettre.

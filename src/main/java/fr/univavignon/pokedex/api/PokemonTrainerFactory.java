@@ -13,7 +13,7 @@ public class PokemonTrainerFactory implements IPokemonTrainerFactory {
     }
 
     public PokemonTrainer createTrainer(String name, Team team, IPokedexFactory pokedexFactory){
-        IPokedex pokedex = pokedexFactory.createPokedex(new PokemonMetadataProvider(), PokemonFactory.getInstance());
+        IPokedex pokedex = pokedexFactory.createPokedex(PokemonMetadataProvider.getInstance(), PokemonFactory.getInstance());
         return new PokemonTrainer(name, team, pokedex);
     }
     

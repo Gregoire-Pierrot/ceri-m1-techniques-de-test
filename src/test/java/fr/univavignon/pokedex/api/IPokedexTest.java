@@ -30,20 +30,27 @@ public class IPokedexTest {
     @Test
     public void testAddPokemon(){
         Mockito.when(iPokedex_mocked.addPokemon(Bulbizarre)).thenReturn(0);
-        Mockito.when(iPokedex_mocked.addPokemon(Aquali)).thenReturn(133);
+        Mockito.when(iPokedex_mocked.addPokemon(Aquali)).thenReturn(1);
         assertEquals(0, iPokedex_mocked.addPokemon(Bulbizarre));
-        assertEquals(133, iPokedex_mocked.addPokemon(Aquali));
+        assertEquals(1, iPokedex_mocked.addPokemon(Aquali));
     }
 
     @Test
     public void testGetPokemon() throws PokedexException{
-        Mockito.when(iPokedex_mocked.getPokemon(1)).thenThrow(new PokedexException("Pokedex Execption"));
-        assertThrows(PokedexException.class, () -> iPokedex_mocked.getPokemon(1));
+        Mockito.when(iPokedex_mocked.getPokemon(0)).thenThrow(new PokedexException("Pokedex Exception"));
+        assertThrows(PokedexException.class, () -> iPokedex_mocked.getPokemon(0));
+
+        Mockito.reset(iPokedex_mocked);
 
         Mockito.when(iPokedex_mocked.getPokemon(0)).thenReturn(Bulbizarre);
-        Mockito.when(iPokedex_mocked.getPokemon(133)).thenReturn(Aquali);
+        Mockito.when(iPokedex_mocked.getPokemon(1)).thenReturn(Aquali);
         assertEquals(Bulbizarre, iPokedex_mocked.getPokemon(0));
-        assertEquals(Aquali, iPokedex_mocked.getPokemon(133));
+        assertEquals(Aquali, iPokedex_mocked.getPokemon(1));
+
+        Mockito.when(iPokedex_mocked.getPokemon(2)).thenThrow(new PokedexException("Pokedex Exception"));
+        assertThrows(PokedexException.class, () -> iPokedex_mocked.getPokemon(2));
+        Mockito.when(iPokedex_mocked.getPokemon(-1)).thenThrow(new PokedexException("Pokedex Exception"));
+        assertThrows(PokedexException.class, () -> iPokedex_mocked.getPokemon(-1));
     }
 
     @Test
@@ -82,5 +89,17 @@ public class IPokedexTest {
         assertEquals(nameList, iPokedex_mocked.getPokemons(PokemonComparators.NAME));
         assertEquals(indexList, iPokedex_mocked.getPokemons(PokemonComparators.INDEX));
         assertEquals(cpList, iPokedex_mocked.getPokemons(PokemonComparators.CP));
+    }
+
+    @Test
+    public void testGetMetadataProvider(){
+        Mockito.when(iPokedex_mocked.getMetadataProvider()).thenReturn(PokemonMetadataProvider.getInstance());
+        assertTrue(iPokedex_mocked.getMetadataProvider() instanceof IPokemonMetadataProvider);
+    }
+
+    @Test
+    public void testGetPokemonFactory(){
+        Mockito.when(iPokedex_mocked.getPokemonFactory()).thenReturn(PokemonFactory.getInstance());
+        assertTrue(iPokedex_mocked.getPokemonFactory() instanceof IPokemonFactory);
     }
 }

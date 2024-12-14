@@ -13,11 +13,11 @@ public class PokemonFactoryTest {
 
     @Test
     public void createPokemonTest(){
-        Pokemon pokemon1 = pokemonFactory.createPokemon(0, 613, 64, 4000, 4, Bulbizarre_metadata);
-        Pokemon pokemon2 = pokemonFactory.createPokemon(3, 7813, 64, 4000, 4, Charmender_metadata);
-        Pokemon pokemon3 = pokemonFactory.createPokemon(133, 2729, 202, 5000, 5, Aquali_metadata);
+        Pokemon pokemon1 = pokemonFactory.createPokemon(613, 64, 4000, 4, Bulbizarre_metadata);
+        Pokemon pokemon2 = pokemonFactory.createPokemon(7813, 64, 4000, 4, Charmender_metadata);
+        Pokemon pokemon3 = pokemonFactory.createPokemon(2729, 202, 5000, 5, Aquali_metadata);
 
-        assertEquals(0, pokemon1.getIndex());
+        assertEquals(Bulbizarre_metadata.getIndex(), pokemon1.getIndex());
         assertEquals(Bulbizarre_metadata.getName(), pokemon1.getName());
         assertTrue(Bulbizarre_metadata.getAttack() <= pokemon1.getAttack() && pokemon1.getAttack() <= Bulbizarre_metadata.getAttack() + 15);
         assertTrue(Bulbizarre_metadata.getDefense() <= pokemon1.getDefense() && pokemon1.getDefense() <= Bulbizarre_metadata.getDefense() + 15);

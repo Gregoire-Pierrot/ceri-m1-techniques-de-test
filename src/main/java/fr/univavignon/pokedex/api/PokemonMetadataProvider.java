@@ -4,9 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PokemonMetadataProvider implements IPokemonMetadataProvider {
+    private static PokemonMetadataProvider instance;
     public List<PokemonMetadata> pokemonMetadatas;
 
-    public PokemonMetadataProvider() {
+    public static PokemonMetadataProvider getInstance(){
+        if (instance == null){
+            instance = new PokemonMetadataProvider();
+        }
+        return instance;
+    }
+
+    private PokemonMetadataProvider() {
         this.pokemonMetadatas = new ArrayList<PokemonMetadata>();
         PokemonMetadata Bulbizarre_metadata = new PokemonMetadata(0, "Bulbizarre", 126, 126, 90);
         PokemonMetadata Charmender_metadata = new PokemonMetadata(3, "Charmender", 126, 126, 90);
