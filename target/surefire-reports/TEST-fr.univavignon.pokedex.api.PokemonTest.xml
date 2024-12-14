@@ -61,6 +61,6 @@
   <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getDustTest" time="0"/>
   <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getCpTest" time="0"/>
   <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getHpTest" time="0"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getCandyTest" time="0.001"/>
-  <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getIvTest" time="0"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getCandyTest" time="0"/>
+  <testcase classname="fr.univavignon.pokedex.api.PokemonTest" name="getIvTest" time="0.001"/>
 </testsuite>

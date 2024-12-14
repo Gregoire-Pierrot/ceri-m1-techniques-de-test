@@ -62,6 +62,7 @@ public class PokedexTest {
     @Test
     public void getPokemonTest(){
         assertThrows(PokedexException.class, () -> { pokedex.getPokemon(0); });
+        assertThrows(PokedexException.class, () -> { pokedex.getPokemon(pokedex.size() - 1); });
         int add_bulbizarre1 = pokedex.addPokemon(Bulbizarre);
         int add_bulbizarre2 = pokedex.addPokemon(Bulbizarre);
         int add_aquali = pokedex.addPokemon(Aquali);
@@ -74,7 +75,6 @@ public class PokedexTest {
         }
 
         assertThrows(PokedexException.class, () -> { pokedex.getPokemon(pokedex.size()); });
-        assertThrows(PokedexException.class, () -> { pokedex.getPokemon(pokedex.size() - 1); });
         assertThrows(PokedexException.class, () -> { pokedex.getPokemon(-1); });
     }
 
