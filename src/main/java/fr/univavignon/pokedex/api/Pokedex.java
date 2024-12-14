@@ -38,7 +38,7 @@ public class Pokedex implements IPokedex {
 
     @Override
     public Pokemon getPokemon(int id) throws PokedexException {
-        if (id < 0 || id > size()){
+        if (id < 0 || id >= size()){
             throw new PokedexException("No Pokemon in this pokedex for this id:" + id);
         }
         try {
