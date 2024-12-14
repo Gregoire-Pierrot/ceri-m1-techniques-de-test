@@ -74,6 +74,7 @@ public class PokedexTest {
         }
 
         assertThrows(PokedexException.class, () -> { pokedex.getPokemon(pokedex.size()); });
+        assertThrows(PokedexException.class, () -> { pokedex.getPokemon(pokedex.size() - 1); });
         assertThrows(PokedexException.class, () -> { pokedex.getPokemon(-1); });
     }
 
