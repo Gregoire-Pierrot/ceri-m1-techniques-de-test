@@ -37,9 +37,10 @@ jobs:
       - run:
           name: Calculate CheckStyle Conformity
           command: |
+            echo "Calcul du pourcentage de conformité CheckStyle..."
             ERRORS=$(grep '<error' target/checkstyle-result.xml | wc -l)
             FILES=$(grep '<file' target/checkstyle-result.xml | wc -l)
-            
+
             if [ ! -f target/checkstyle-result.xml ]; then
               echo "Le fichier target/checkstyle-result.xml est manquant!"
               exit 1
