@@ -8,19 +8,19 @@ package fr.univavignon.pokedex.api;
 public final class Pokemon extends PokemonMetadata {
 
 	/** Combat Point of the pokemon. **/
-	private final int cp;
+    private final int cp;
 
 	/** HP of the pokemon. **/
-	private final int hp;
+    private final int hp;
 
 	/** Required dust for upgrading this pokemon. **/
-	private final int dust;
+    private final int dust;
 
 	/** Required candy for upgrading this pokemon. **/
-	private final int candy;
+    private final int candy;
 
 	/** IV perfection percentage. **/
-	private final double iv;
+    private final double iv;
 	
 	/**
 	 * Default constructor.
@@ -36,7 +36,7 @@ public final class Pokemon extends PokemonMetadata {
 	 * @param candy Required candy for upgrading this pokemon.
 	 * @param iv IV perfection percentage.
 	 */
-	public Pokemon(
+    public Pokemon(
 			final int index,
 			final String name,
 			final int attack,
@@ -47,37 +47,37 @@ public final class Pokemon extends PokemonMetadata {
 			final int dust,
 			final int candy,
 			final double iv) {
-		super(index, name, attack, defense, stamina);
-		this.cp = cp;
-		this.hp = hp;
-		this.dust = dust;
-		this.candy = candy;
-		this.iv = iv;
-	}
+        super(index, name, attack, defense, stamina);
+        this.cp = cp;
+        this.hp = hp;
+        this.dust = dust;
+        this.candy = candy;
+        this.iv = iv;
+    }
 
 	/** Combat Point getter getter. **/
-	public int getCp() {
-		return cp;
-	}
+    public int getCp() {
+        return cp;
+    }
 	
 	/** HP getter. **/
-	public int getHp() {
-		return hp;
-	}
+    public int getHp() {
+        return hp;
+    }
 
 	/** Dust getter. **/
-	public int getDust() {
-		return dust;
-	}
+    public int getDust() {
+        return dust;
+    }
 
 	/** Candy getter. **/
-	public int getCandy() {
-		return candy;
-	}
+    public int getCandy() {
+        return candy;
+    }
 	
 	/** IV getter. **/
-	public double getIv() {
-		return iv;
-	}
+    public double getIv() {
+        return iv;
+    }
 	
 }

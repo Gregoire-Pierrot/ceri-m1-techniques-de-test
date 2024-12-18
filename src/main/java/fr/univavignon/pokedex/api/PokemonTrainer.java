@@ -8,13 +8,13 @@ package fr.univavignon.pokedex.api;
 public class PokemonTrainer {
 
 	/** Trainer name. **/
-	private final String name;
+    private final String name;
 
 	/** Trainer team. **/
-	private final Team team;
+    private final Team team;
 	
 	/** Trainer pokedex. **/
-	private final IPokedex pokedex;
+    private final IPokedex pokedex;
 	
 	/**
 	 * Default constructor.
@@ -23,25 +23,25 @@ public class PokemonTrainer {
 	 * @param team Trainer team.
 	 * @param pokedex Trainer pokedex.
 	 */
-	public PokemonTrainer(final String name, final Team team, final IPokedex pokedex) {
-		this.name = name;
-		this.team = team;
-		this.pokedex = pokedex;
-	}
+    public PokemonTrainer(final String name, final Team team, final IPokedex pokedex) {
+        this.name = name;
+        this.team = team;
+        this.pokedex = pokedex;
+    }
 	
 	/** Name getter. **/
-	public String getName() {
-		return name;
-	}
+    public String getName() {
+        return name;
+    }
 
 	/** Team getter. **/
-	public Team getTeam() {
-		return team;
-	}
+    public Team getTeam() {
+        return team;
+    }
 	
 	/** Pokedex getter. **/
-	public IPokedex getPokedex() {
-		return pokedex;
-	}
+    public IPokedex getPokedex() {
+        return pokedex;
+    }
 	
 }

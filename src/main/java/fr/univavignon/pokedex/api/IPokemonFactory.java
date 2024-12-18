@@ -17,6 +17,6 @@ public interface IPokemonFactory {
 	 * @param metadata Requierd metadata for creating a new pokemon.
 	 * @return Created pokemon instance.
 	 */
-	Pokemon createPokemon(int cp, int hp, int dust, int candy, PokemonMetadata metadata);
+    Pokemon createPokemon(int cp, int hp, int dust, int candy, PokemonMetadata metadata);
 	
 }

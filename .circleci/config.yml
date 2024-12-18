@@ -20,11 +20,20 @@ jobs:
           name: Run Maven tests
           command: mvn test  # Exécuter les tests unitaires avec Maven
       - run:
+          name: Run CheckStyle
+          command: mvn checkstyle:check
+      - run:
+          name: Generate CheckStyle Report
+          command: mvn checkstyle:checkstyle
+      - run:
           name: Run Maven coverage
           command: mvn jacoco:report
       - run:
           name: Upload to codecov
           command: bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -s target/site/jacoco -r "Gregoire-Pierrot/ceri-m1-techniques-de-test"
+      - store_artifacts:
+          path: target/site
+          destination: reports
       
 workflows:
   version: 2
