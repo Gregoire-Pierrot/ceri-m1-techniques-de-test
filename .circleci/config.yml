@@ -38,14 +38,16 @@ jobs:
           name: Calculate CheckStyle Conformity
           command: |
             echo "Calcul du pourcentage de conformité CheckStyle..."
-            ERRORS=$(grep '<error' target/checkstyle-result.xml | wc -l)
-            FILES=$(grep '<file' target/checkstyle-result.xml | wc -l)
-            echo "test après grep"
-
+            
             if [ ! -f target/checkstyle-result.xml ]; then
               echo "Le fichier target/checkstyle-result.xml est manquant!"
               exit 1
             fi
+
+            ERRORS=$(grep '<error' target/checkstyle-result.xml | wc -l)
+            echo ERRORS
+            FILES=$(grep '<file' target/checkstyle-result.xml | wc -l)
+            echo FILES
 
             if [ "$FILES" -gt 0 ]; then
               PERCENTAGE=$((100 - (ERRORS * 100 / FILES)))
