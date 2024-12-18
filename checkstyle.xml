@@ -26,7 +26,6 @@
 
         <!-- Documentation spécifique -->
         <module name="JavadocMethod">
-            <property name="scope" value="protected"/>
             <property name="allowMissingParamTags" value="false"/>
             <property name="allowMissingThrowsTags" value="false"/>
         </module>
