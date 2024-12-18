@@ -25,10 +25,7 @@
         </module>
 
         <!-- Documentation spécifique -->
-        <module name="JavadocMethod">
-            <property name="allowMissingParamTags" value="false"/>
-            <property name="allowMissingThrowsTags" value="false"/>
-        </module>
+        <module name="JavadocMethod"/>
         <module name="JavadocType"/>
         <module name="JavadocVariable"/>
         <module name="MissingJavadocMethod"/>
