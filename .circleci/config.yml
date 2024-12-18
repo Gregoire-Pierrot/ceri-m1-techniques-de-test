@@ -34,24 +34,6 @@ jobs:
       - store_artifacts:
           path: target/site
           destination: reports
-      - run:
-          name: Calculate CheckStyle Conformity
-          command: |
-            echo "Calcul du pourcentage de conformité CheckStyle..."
-            ERRORS=$(grep '<error' target/checkstyle-result.xml | wc -l)
-            echo $ERRORS
-            FILES=$(grep '<file' target/checkstyle-result.xml | wc -l)
-            echo $FILES
-            PERCENTAGE=$(100-$ERRORS*100/$FILES)
-            echo $PERCENTAGE
-      - run:
-          name: Commit and Push Updated README
-          command: |
-            git config --global user.name "circleci[bot]"
-            git config --global user.email "circleci[bot]@users.noreply.github.com"
-            git add README.md
-            git commit -m "Update Checkstyle badge to $PERCENTAGE%"
-            git push origin $(git rev-parse --abbrev-ref HEAD)
       
 workflows:
   version: 2
