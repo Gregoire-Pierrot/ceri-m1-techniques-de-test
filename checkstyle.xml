@@ -5,9 +5,7 @@
 
 <module name="Checker">
     <!-- Documentation générale -->
-    <!-->
     <module name="JavadocPackage"/>
-    <-->
 
     <!-- Vérification des structures de code -->
     <module name="TreeWalker">
@@ -27,12 +25,14 @@
         </module>
 
         <!-- Documentation spécifique -->
-        <!-->
+        <module name="JavadocMethod">
+            <property name="scope" value="protected"/>
+            <property name="allowMissingParamTags" value="false"/>
+            <property name="allowMissingThrowsTags" value="false"/>
+        </module>
         <module name="JavadocType"/>
-        <module name="JavadocMethod"/>
         <module name="JavadocVariable"/>
         <module name="MissingJavadocMethod"/>
-        <-->
 
         <!-- Importation -->
         <module name="UnusedImports"/>

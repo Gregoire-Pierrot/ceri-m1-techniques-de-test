@@ -1,0 +1,40 @@
+@options
+@packages
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ceri-m1-techniques-de-test 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'ceri-m1-techniques-de-test 1.0-SNAPSHOT API'
+fr.univavignon.pokedex.api
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/src/main/java = 1731498298000
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/tag-search-index.js = 1734562103846
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/index-all.html = 1734562103865
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/allpackages-index.html = 1734562103845
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/search.html = 1734562103867
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/overview-tree.html = 1734562103827
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/element-list = 1734562103708
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/type-search-index.js = 1734562103846
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/help-doc.html = 1734562103874
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/allclasses-index.html = 1734562103843
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/module-search-index.js = 1734562103845
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/package-search-index.js = 1734562103845
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/member-search-index.js = 1734562103846
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/serialized-form.html = 1734562103739
+/home/gregoire/Bureau/Cours/Post Bac/M1 - Ilsen/S1/Technique de Tests/ceri-m1-techniques-de-test/target/site/apidocs/index.html = 1734562103869
