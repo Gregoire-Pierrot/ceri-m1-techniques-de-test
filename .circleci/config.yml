@@ -38,35 +38,12 @@ jobs:
           name: Calculate CheckStyle Conformity
           command: |
             echo "Calcul du pourcentage de conformité CheckStyle..."
-            echo grep '<error' target/checkstyle-result.xml | wc -l
-
-            if [ ! -f target/checkstyle-result.xml ]; then
-              echo "Le fichier target/checkstyle-result.xml est manquant!"
-              exit 1
-            fi
-
             ERRORS=$(grep '<error' target/checkstyle-result.xml | wc -l)
-            echo ERRORS
+            echo $ERRORS
             FILES=$(grep '<file' target/checkstyle-result.xml | wc -l)
-            echo FILES
-
-            if [ "$FILES" -gt 0 ]; then
-              PERCENTAGE=$((100 - (ERRORS * 100 / FILES)))
-            else
-              PERCENTAGE=100
-            fi
-
-            echo "Nombre d'erreurs: $ERRORS"
-            echo "Nombre de fichiers: $FILES"
-            echo "Pourcentage attendu: $PERCENTAGE%"
-            echo "Checkstyle Conformity: $PERCENTAGE%"
-
-            if grep -q "!\[Checkstyle Conformity\]" README.md; then
-              sed -i "s/!\[Checkstyle Conformity\](.*)/![Checkstyle Conformity](https:\/\/img.shields.io\/badge\/Checkstyle-${PERCENTAGE}%25-brightgreen)/" README.md
-            else
-              echo "Aucun badge Checkstyle trouvé dans README.md."
-              exit 1
-            fi
+            echo $FILES
+            PERCENTAGE=$(100-$ERRORS*100/$FILES)
+            echo $PERCENTAGE
       - run:
           name: Commit and Push Updated README
           command: |
