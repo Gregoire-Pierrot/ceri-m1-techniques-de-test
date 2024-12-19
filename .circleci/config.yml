@@ -43,7 +43,7 @@ jobs:
             git config --global user.name "gregoire-pierrot"
             git config --global user.email "gregoire.pierrot@alumni.univ-avignon.fr"
 
-            git clone --branch https://github.com/Gregoire-Pierrot/ceri-m1-techniques-de-test.git gh-pages
+            git clone --branch gh-pages https://github.com/Gregoire-Pierrot/ceri-m1-techniques-de-test.git gh-pages
 
             cp -R ./target/site/apidocs/* gh-pages
 
