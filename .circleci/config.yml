@@ -35,23 +35,6 @@ jobs:
           path: target/site
           destination: reports
 
-  generate-javadoc:
-    executor: maven-executor
-    steps: 
-      - uses: actions/checkout@v4
-      - uses: actions/setup-java@v4
-        with:
-            distribution: 'corretto'
-            java-version: '21'
-      - name: Documentation
-        run: |
-          mvn javadoc:javadoc
-      - name: Upload javadoc
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/reports/apidocs
-
       
 workflows:
   version: 2
