@@ -44,8 +44,7 @@ CircleCi : [![CircleCI](https://dl.circleci.com/status-badge/img/circleci/STVR3N
 
 CodeCov : [![codecov](https://codecov.io/gh/Gregoire-Pierrot/ceri-m1-techniques-de-test/graph/badge.svg?token=KBY7SUO60T)](https://codecov.io/gh/Gregoire-Pierrot/ceri-m1-techniques-de-test)
 
-Conformité du style :
-![Checkstyle Conformity](https://img.shields.io/badge/Checkstyle-100%25-brightgreen)
+Conformité du style : ![Checkstyle Conformity](https://img.shields.io/badge/Checkstyle-100%25-brightgreen)
 
 ## Documentations sur l'implémentation
 
