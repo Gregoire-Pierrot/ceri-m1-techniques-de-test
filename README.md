@@ -55,3 +55,27 @@ Précision sur l'implémentation :
 - Les classes [PokedexFactory](src/main/java/fr/univavignon/pokedex/api/PokedexFactory.java), [PokemonFactory](src/main/java/fr/univavignon/pokedex/api/PokemonFactory.java), [PokemonMetadataProvider](src/main/java/fr/univavignon/pokedex/api/PokemonMetadataProvider.java), [PokemonTrainerFactory](src/main/java/fr/univavignon/pokedex/api/PokemonTrainerFactory.java) sont définies en singleton puisqu'elles représentent une manière prédéfini de création d'objet ou une liste prédéfinie de metadata. Leurs interfaces quand à elles ne contiennent pas la méthode `getInstance` puisqu'il est possible de créer une classe inmplémentant l'une d'elle qui définis une liste ou une méthode de création à l'instanciation d'un de ses objets.
 
 [^1]: Si vous n’êtes vraiment pas à l’aise avec cet outil nous vous conseillons quand même vivement de vous y mettre.
+
+## TP6
+
+#### Problèmes
+
+- Le package n'est pas le bon. Fichier mal placé.
+
+- La déclaration de la méthode createPokemon a changer
+
+- Dans le cas ou on créer un pokemon avec l'index -1; les variables : attack, defense et stamina ne sont pas entre 0 et 15 -> Problème dans les tests.
+
+- La génération de random doit se faire entre 0 et 15 et non pas avec un boucle qui boucle 1000000x -> Problème dans les tests.
+
+- Pas besoin de faire une Map. Les metadata doivent être passer dans la méthode createPokemon.
+
+- Un TODO est présent.
+
+- Redondance d'import : IPokemonFactory et Pokemon
+
+- Problème de style avec les tabulations.
+
+- JavaDoc manquante.
+
+- La méthode generateRandomStat ne devrait pas être static.

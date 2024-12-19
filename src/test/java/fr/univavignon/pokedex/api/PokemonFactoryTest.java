@@ -26,7 +26,7 @@ public class PokemonFactoryTest {
         assertEquals(64, pokemon1.getHp());
         assertEquals(4000, pokemon1.getDust());
         assertEquals(4, pokemon1.getCandy());
-        assertTrue(0 <= pokemon1.getIv() && pokemon1.getIv() <= 45);
+        assertTrue(0 <= pokemon1.getIv() && pokemon1.getIv() <= 15);
 
         assertEquals(3, pokemon2.getIndex());
         assertEquals(Charmender_metadata.getName(), pokemon2.getName());
@@ -37,7 +37,7 @@ public class PokemonFactoryTest {
         assertEquals(64, pokemon2.getHp());
         assertEquals(4000, pokemon2.getDust());
         assertEquals(4, pokemon2.getCandy());
-        assertTrue(0 <= pokemon2.getIv() && pokemon2.getIv() <= 45);
+        assertTrue(0 <= pokemon2.getIv() && pokemon2.getIv() <= 15);
 
         assertEquals(133, pokemon3.getIndex());
         assertEquals(Aquali_metadata.getName(), pokemon3.getName());
@@ -48,7 +48,7 @@ public class PokemonFactoryTest {
         assertEquals(202, pokemon3.getHp());
         assertEquals(5000, pokemon3.getDust());
         assertEquals(5, pokemon3.getCandy());
-        assertTrue(0 <= pokemon3.getIv() && pokemon3.getIv() <= 45);
+        assertTrue(0 <= pokemon3.getIv() && pokemon3.getIv() <= 15);
     }
     
 }
