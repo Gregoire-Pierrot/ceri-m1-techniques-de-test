@@ -24,4 +24,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           name: javadoc
-          path: ./target/site/apidocs
+          path: ./target/report/apidocs
